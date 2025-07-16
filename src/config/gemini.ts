@@ -45,7 +45,6 @@ async function runChat(prompt) {
   for await (const chunk of response) {
     console.log(chunk.text);
     outputText += chunk.text;
-    return chunk.text;
   }
 
   return outputText;
