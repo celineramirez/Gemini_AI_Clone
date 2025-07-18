@@ -2,13 +2,13 @@
 // npm install @google/genai mime
 // npm install -D @types/node
 
-import {
-  GoogleGenAI,
-} from '@google/genai';
+import { GoogleGenAI } from '@google/genai';
+
+const api_key = import.meta.env.VITE_GEMINI_API_KEY
 
 async function runChat(prompt) {
   const ai = new GoogleGenAI({
-    apiKey: "AIzaSyBQd-KdPubYZ0Nc8mT-q7W61z6rJJEyLwI",
+    apiKey: api_key,
   });
   const tools = [
     {
